@@ -16,7 +16,7 @@ int main() {
    printf("The value of x=%d",a.x);
       printf("The value of y=%d",a.y);
          printf("The value of z=%d",a.z);
-         printf("The size of structure a:%d",sizeof(a));   }
+         printf("The size of structure :%d",sizeof(a));   }
 
     return 0;
 }
