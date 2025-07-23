@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+   struct A;
+   {
+       int x;
+       float y;
+       char z;
+   }
+   a;
+   int main(){
+   scanf("%d",&a,x);
+   a,y=36,58;
+   az='M';
+   printf("The value of x=%d",a.x);
+      printf("The value of y=%d",a.y);
+         printf("The value of z=%d",a.z);
+         printf("The size of structure a:%d",sizeof(a));   }
+
+    return 0;
+}
