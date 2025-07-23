@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+// Recursive function to sum even digits
+int sumEvenDigits(int n) {
+    if (n == 0)
+        return 0;
+    int digit = n % 10;
+    if (digit % 2 == 0)
+        return digit + sumEvenDigits(n / 10);
+    else
+        return sumEvenDigits(n / 10);
+}
+
+int main() {
+    int num, sum;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    sum = sumEvenDigits(num);
+
+    printf("Sum of even digits = %d\n", sum);
+
+    return 0;
+}
