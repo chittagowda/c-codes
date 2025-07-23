@@ -1,0 +1,80 @@
+#include <stdio.h>
+int main()
+{
+    int bal = 1000;
+    int pin, m, n, np1, np2;
+    printf("\nEnter the action you want to perform: ");
+    printf("\n1.Cash Deposit\n2.Cash Withdraw\n3.Check Balance\n4.Change Pin\n");
+    scanf("%d", &n);
+    switch(n)
+    {
+        case 1:
+        {
+        printf("\nEnter your pin: ");
+        scanf("%d", &pin);
+        if(pin == 1234)
+        {
+            printf("\nEnter the amount to be deposited: ");
+            scanf("%d", &m);
+            bal = bal + m;
+            printf("\nNew balance is %d", bal);
+            break;
+        }
+        else
+        printf("\nWrong pin");
+        }
+        case 2:
+        {
+        printf("\nEnter your pin: ");
+        scanf("%d", &pin);
+        if(pin == 1234)
+        {
+            printf("\nEnter the amount to be withdrawn: ");
+            scanf("%d", &m);
+            bal = bal - m;
+            if(bal>=0)
+            printf("\nNew balance is %d", bal);
+            else
+            printf("\nInsufficient balance");
+        }
+        else
+        printf("\nWrong pin");
+        break;
+        }
+        case 3:
+        {
+            printf("\nEnter your pin: ");
+            scanf("%d", &pin);
+            if(pin == 1234)
+            printf("Your balance is: %d", bal);
+            else
+            printf("\nWrong pin");
+            break;
+        }
+        case 4:
+        {
+            printf("\nEnter your pin: ");
+            scanf("%d", &pin);
+            if(pin == 1234)
+            {
+               printf("\nEnter your new pin: ");
+               scanf("%d", &np1);
+               printf("\nConfirm your new pin: ");
+               scanf("%d", &np2);
+               if(np1 == np2)
+               {
+                   pin = np1;
+                   printf("Your pin is set");
+               }
+               else
+               printf("\nYour pin does not match");
+            }
+            else
+            printf("\nWrong pin");
+            break;
+        }
+        default:
+        printf("\nInvalid request");
+    }
+    return 0;
+}
